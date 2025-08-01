@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>ASMAC - Calendrier</title>
+
+    <script src="../calendar.js"></script>
+    <script src="../navbar.js"></script>
+</head>
+
+<body>
+    <nav-cust></nav-cust>
+
+    <!-- makes the language switch point to the right page -->
+    <script>
+        const languageSwapElement = document.getElementById("languageSwap")
+        languageSwapElement.innerText = "English"
+        languageSwapElement.href = "../en/calendar.html"
+    </script>
+    
+    <!-- hides english content -->
+    <style>
+        .en {
+            display: none;
+        }
+    </style>
+
+    <div id="pageBody">
+        <h1>Calendrier</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Événement</th>
+                    <th>Lieu</th>
+                </tr>
+            </thead>
+            <tbody id="calendarBody">
+        </table>
+
+        <h1>Actualités</h1>
+        <ul>
+            <li>One thing</li>
+            <li>Other thing</li>
+            <li>Third thing</li>
+        </ul>
+
+        <h1>Actualités passés</h1>
+        <ul>
+            <li>Fourth thing</li>
+            <li>Hi</li>
+        </ul>
+    </div>
+
+    <script defer>
+        const div = document.getElementById("calendarBody")
+        for (let i = 0; i < calendar.length; i++) {
+            const row = document.createElement("tr")
+
+            const date = document.createElement("td")
+            date.innerText = calendar[i].date.en
+            if (calendar[i].date.link !== undefined) {
+                date.onclick = function () { window.location.href = calendar[i].date.link }
+                date.style = "cursor: pointer"
+            }
+            row.append(date)
+
+            const event = document.createElement("td")
+            event.innerText = calendar[i].event.en
+            if (calendar[i].event.link !== undefined) {
+                event.onclick = function () { window.location.href = calendar[i].event.link }
+                event.style = "cursor: pointer"
+            }
+            row.append(event)
+
+            const location = document.createElement("td")
+            location.innerText = calendar[i].location.en
+            if (calendar[i].location.link !== undefined) {
+                location.onclick = function () { window.location.href = calendar[i].location.link }
+                location.style = "cursor: pointer"
+            }
+            row.append(location)
+
+            div.append(row)
+        }
+    </script>
+</body>
+
+</html>

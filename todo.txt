@@ -1,0 +1,5 @@
+close the navbar into a togglable vertical menu when the screen width is too low
+passwords
+    needs access to wordpress server; fake it?
+fill in some french pages
+new logo?

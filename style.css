@@ -1,9 +1,9 @@
 :root {
-    --navy: #2B2D42;
-    --gray: #8D99AE;
+    --dark: #2b422e;
+    --gray: #8dae8e;
     --white: #EDF2F4;
-    --lightRed: #EF233C;
-    --red: #D90429;
+    --lightColour: #d30f29;
+    --colour: #b90422;
 }
 
 body {
@@ -17,7 +17,10 @@ body {
 }
 
 #navbar {
-    display: block;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 
     position: fixed;
     top: 0px;
@@ -27,8 +30,8 @@ body {
 
 
     border-radius: 0px 0px 10px 10px;
-    background-color: var(--navy);
-    background: linear-gradient(0deg, var(--navy), rgb(26 26 38));
+    background-color: var(--dark);
+    background: linear-gradient(0deg, var(--dark), rgb(26, 38, 27));
 
     color: var(--white);
 
@@ -38,10 +41,9 @@ body {
 #navbarLinks {
     position: fixed;
     right: 0px;
-    display: inline;
+    display: flex;
     text-align: right;
     width: 75%;
-    text-align: right;
     margin: auto;
 }
 
@@ -59,7 +61,7 @@ body {
 }
 
 .navbarElm:hover {
-    background-color: var(--lightRed);
+    background-color: var(--lightColour);
 }
 
 .dropDown {
@@ -70,10 +72,9 @@ body {
 .dropDownHolder {
     display: none;
     position: absolute;
-    background-color: var(--red);
-    width: 150px;
+    background-color: var(--colour);
+    width: 200px;
     text-align: center;
-    padding: 10px;
     border-radius: 0px 10px 10px 10px;
     left: 0px;
     top: 85px;
@@ -89,6 +90,11 @@ body {
     text-decoration: none;
 }
 
+.dropDownContent:hover {
+    background-color: var(--lightColour);
+    border-radius: 0px 10px 10px 10px;
+}
+
 #pageBody {
     position: relative;
     top: 75px;
@@ -97,19 +103,19 @@ body {
 
 table {
     margin: auto;
-    width: 90%;
+    width: min(90%, 1200px);
     text-align: center;
-    border: 5px solid var(--navy);
+    border: 5px solid var(--dark);
     border-collapse: collapse;
 }
 
 td {
-    border: 2px solid var(--navy);
+    border: 2px solid var(--dark);
     padding: 10px;
 }
 
 th {
-    border: 2px solid var(--navy);
+    border: 2px solid var(--dark);
     background-color: var(--gray);
     padding: 10px;
 }

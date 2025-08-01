@@ -12,38 +12,21 @@
 </head>
 
 <body>
-    <div id="navbar">
-        <img style="height:75px; padding: 10px;" src="../ASMAC-EN-Logo-02.jpg">
-        <div id="navbarLinks">
-            <a href="./calendar.html" class="navbarElm">Calendar & News</a>
+    <nav-cust></nav-cust>
 
-            <div id="membersDropDownTrigger" class="dropDown navbarElm" onclick="toggleDropDown('members')">
-                <span>Members</span>
-                <div id="membersDropDownHolder" class="dropDownHolder">
-                    <a href="./members.html" class="dropDownContent">Members List</a>
-                    <a href="./executive-comittee.html" class="dropDownContent">Executive Committee</a>
-                </div>
-            </div>
+    <!-- makes the language switch point to the right page -->
+    <script>
+        const languageSwapElement = document.getElementById("languageSwap")
+        languageSwapElement.innerText = "Français"
+        languageSwapElement.href = "../fr/calendrier.html"
+    </script>
 
-            <div id="bursariesDropDownTrigger" class="dropDown navbarElm" onclick="toggleDropDown('bursaries')">
-                <span>Bursaries</span>
-                <div id="bursariesDropDownHolder" class="dropDownHolder">
-                    <a href="./members.html" class="dropDownContent">Members List</a>
-                    <a href="./executive-comittee.html" class="dropDownContent">Executive Committee</a>
-                </div>
-            </div>
-
-            <div id="aboutUsDropDownTrigger" class="dropDown navbarElm" onclick="toggleDropDown('aboutUs')">
-                <span>About Us</span>
-                <div id="aboutUsDropDownHolder" class="dropDownHolder">
-                    <a href="./members.html" class="dropDownContent">Members List</a>
-                    <a href="./executive-comittee.html" class="dropDownContent">Executive Committee</a>
-                </div>
-            </div>
-
-            <a href="../fr/calendrier.html" class="navbarElm">Français</a>
-        </div>
-    </div>
+    <!-- hides french content -->
+    <style>
+        .fr {
+            display: none;
+        }
+    </style>
 
     <div id="pageBody">
         <h1>Calendar</h1>
@@ -79,14 +62,26 @@
 
             const date = document.createElement("td")
             date.innerText = calendar[i].date.en
+            if (calendar[i].date.link !== undefined) {
+                date.onclick = function () { window.location.href = calendar[i].date.link }
+                date.style = "cursor: pointer"
+            }
             row.append(date)
 
             const event = document.createElement("td")
             event.innerText = calendar[i].event.en
+            if (calendar[i].event.link !== undefined) {
+                event.onclick = function () { window.location.href = calendar[i].event.link }
+                event.style = "cursor: pointer"
+            }
             row.append(event)
 
             const location = document.createElement("td")
             location.innerText = calendar[i].location.en
+            if (calendar[i].location.link !== undefined) {
+                location.onclick = function () { window.location.href = calendar[i].location.link }
+                location.style = "cursor: pointer"
+            }
             row.append(location)
 
             div.append(row)
