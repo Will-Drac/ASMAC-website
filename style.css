@@ -16,6 +16,10 @@ body {
     display: none;
 }
 
+.HIDE {
+    display: none !important;
+}
+
 #navbar {
     display: flex;
     justify-content: space-between;
@@ -41,20 +45,39 @@ body {
     z-index: 100;
 }
 
+#navbar.vertical {
+    border-radius: 0px 0px 0px 10px !important;
+}
+
 #navbarLinks {
     position: fixed;
     right: 0px;
     display: flex;
+    flex-direction: row;
     text-align: right;
     width: 75%;
     margin: auto;
+}
+
+#navCollapse {
+    cursor: pointer;
+}
+
+#navbarLinks.vertical {
+    top: 100px;
+    width: 200px !important;
+    flex-direction: column !important;
+    background: #022106d6;
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+    border-radius: 0px 0px 0px 10px;
 }
 
 .navbarElm {
     padding-left: 1.2%;
     padding-right: 1.2%;
     padding-top: 40px;
-    padding-bottom: 42px;
+    padding-bottom: 41px;
     border-radius: 0px 0px 10px 10px;
     color: var(--white);
     text-decoration: none;
@@ -66,6 +89,14 @@ body {
 
 .navbarElm:hover {
     background-color: var(--lightColour);
+}
+
+.navbarElm.vertical {
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    width: 200px;
+    border-radius: 0px 0px 0px 0px;
 }
 
 .dropDown {
@@ -85,6 +116,12 @@ body {
     z-index: 5;
 }
 
+.dropDownHolder.vertical {
+    left: -200px;
+    top: 0px;
+    border-radius: 10px 0px 0px 10px;
+}
+
 .dropDownContent {
     padding: 0px;
     padding-top: 30px;
@@ -96,7 +133,12 @@ body {
 
 .dropDownContent:hover {
     background-color: var(--lightColour);
-    border-radius: 0px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.dropDownContent.vertical {
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 #pageBody {

@@ -6,6 +6,8 @@ class Navbar extends HTMLElement {
             <img style="height:75px; padding: 10px; border-radius: 25px" class="en" title="ASMAC Logo" src="../ASMAC Logo.png">
             <img style="height:75px; padding: 10px; border-radius: 25px" class="fr" title="Logo AFASC" src="../AFASC Logo.png">
 
+            <img src="../open menu icon.svg" id="navCollapse" style="padding: 20px" height=50>
+
             <div id="navbarLinks">
                 <a href="./calendar.html" class="navbarElm en">Calendar & News</a>
                 <a href="./calendrier.html" class="navbarElm fr">Calendrier & Actualités</a>
