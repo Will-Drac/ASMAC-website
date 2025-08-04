@@ -3,12 +3,14 @@ class Navbar extends HTMLElement {
         this.innerHTML = /*html*/ `
 
         <div id="navbar">
-            <img style="height:75px; padding: 10px; border-radius: 25px" src="../ASMAC Logo.png">
+            <img style="height:75px; padding: 10px; border-radius: 25px" class="en" title="ASMAC Logo" src="../ASMAC Logo.png">
+            <img style="height:75px; padding: 10px; border-radius: 25px" class="fr" title="Logo AFASC" src="../AFASC Logo.png">
+
             <div id="navbarLinks">
                 <a href="./calendar.html" class="navbarElm en">Calendar & News</a>
                 <a href="./calendrier.html" class="navbarElm fr">Calendrier & Actualités</a>
 
-                <div id="membershipDropDownTrigger" class="dropDown navbarElm" onclick="toggleDropDown('membership')">
+                <div id="membershipDropDownTrigger" class="dropDown navbarElm">
                     <span class="en">Membership</span>
                     <span class="fr">Adhésion</span>
                     <div id="membershipDropDownHolder" class="dropDownHolder">
@@ -20,7 +22,7 @@ class Navbar extends HTMLElement {
                     </div>
                 </div>
 
-                <div id="bursariesDropDownTrigger" class="dropDown navbarElm" onclick="toggleDropDown('bursaries')">
+                <div id="bursariesDropDownTrigger" class="dropDown navbarElm">
                     <span class="en">Bursaries</span>
                     <span class="fr">Bourses</span>
                     <div id="bursariesDropDownHolder" class="dropDownHolder">
@@ -32,7 +34,7 @@ class Navbar extends HTMLElement {
                     </div>
                 </div>
 
-                <div id="aboutUsDropDownTrigger" class="dropDown navbarElm" onclick="toggleDropDown('aboutUs')">
+                <div id="aboutUsDropDownTrigger" class="dropDown navbarElm">
                     <span class="en">About Us</span>
                     <span class="fr">À propos de nous</span>
                     <div id="aboutUsDropDownHolder" class="dropDownHolder">
@@ -44,7 +46,7 @@ class Navbar extends HTMLElement {
                     </div>
                 </div>
 
-                <div id="loginDropDownTrigger" class="dropDown navbarElm" onclick="toggleDropDown('login')">
+                <div id="loginDropDownTrigger" class="dropDown navbarElm">
                     <span class="en">Login</span>
                     <span class="fr">Connexion</span>
                     <div id="loginDropDownHolder" class="dropDownHolder">
@@ -65,34 +67,3 @@ class Navbar extends HTMLElement {
 }
 
 customElements.define("nav-cust", Navbar)
-
-
-let dropDowns = {
-    membership: false,
-    bursaries: false,
-    aboutUs: false,
-    login: false
-}
-
-function toggleDropDown(name) {
-    if (dropDowns[name] == false) {
-        document.getElementById(name + "DropDownTrigger").style = "background-color: var(--colour);"
-        document.getElementById(name + "DropDownHolder").style = "display: block"
-    }
-    else {
-        document.getElementById(name + "DropDownTrigger").style = ""
-        document.getElementById(name + "DropDownHolder").style = "display: none"
-    }
-
-    dropDowns[name] = !dropDowns[name]
-
-    // closing all the other ones
-    let dropDownKeys = Object.keys(dropDowns)
-    for (let i = 0; i < dropDownKeys.length; i++) {
-        if (dropDownKeys[i] !== name) {
-            document.getElementById(dropDownKeys[i] + "DropDownTrigger").style = ""
-            document.getElementById(dropDownKeys[i] + "DropDownHolder").style = "display: none"
-            dropDowns[dropDownKeys[i]] = false
-        }
-    }
-}

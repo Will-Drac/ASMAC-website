@@ -3,3 +3,5 @@ passwords
     needs access to wordpress server; fake it?
 fill in some french pages
 new logo?
+
+mobile friendly

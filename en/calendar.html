@@ -9,6 +9,7 @@
 
     <script src="../calendar.js"></script>
     <script src="../navbar.js"></script>
+    <script src="../navbarInteraction.js" defer></script>
 </head>
 
 <body>
@@ -51,7 +52,7 @@
         <h1>Past News</h1>
         <ul>
             <li>Fourth thing</li>
-            <li>Hi</li>
+            <li>Fifth thing</li>
         </ul>
     </div>
 
@@ -61,26 +62,41 @@
             const row = document.createElement("tr")
 
             const date = document.createElement("td")
-            date.innerText = calendar[i].date.en
             if (calendar[i].date.link !== undefined) {
-                date.onclick = function () { window.location.href = calendar[i].date.link }
-                date.style = "cursor: pointer"
+                const dateLink = document.createElement("a")
+                dateLink.innerText = calendar[i].date.en
+                dateLink.href = calendar[i].date.link
+                dateLink.target = "_blank"
+                date.append(dateLink)
+            }
+            else {
+                date.innerText = calendar[i].date.en
             }
             row.append(date)
 
             const event = document.createElement("td")
-            event.innerText = calendar[i].event.en
             if (calendar[i].event.link !== undefined) {
-                event.onclick = function () { window.location.href = calendar[i].event.link }
-                event.style = "cursor: pointer"
+                const eventLink = document.createElement("a")
+                eventLink.innerText = calendar[i].event.en
+                eventLink.href = calendar[i].event.link
+                eventLink.target = "_blank"
+                event.append(eventLink)
+            }
+            else {
+                event.innerText = calendar[i].event.en
             }
             row.append(event)
 
             const location = document.createElement("td")
-            location.innerText = calendar[i].location.en
             if (calendar[i].location.link !== undefined) {
-                location.onclick = function () { window.location.href = calendar[i].location.link }
-                location.style = "cursor: pointer"
+                const locationLink = document.createElement("a")
+                locationLink.innerText = calendar[i].location.en
+                locationLink.href = calendar[i].location.link
+                locationLink.target = "_blank"
+                location.append(locationLink)
+            }
+            else {
+            location.innerText = calendar[i].location.en
             }
             row.append(location)
 
