@@ -4,4 +4,9 @@ passwords
 fill in some french pages
 new logo?
 
-mobile friendly
+landing page "home"
+3 top things determined on the fly
+        webinar
+        bursary
+        register for general meeting
+    a bit of information and link

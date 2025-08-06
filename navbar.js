@@ -9,8 +9,8 @@ class Navbar extends HTMLElement {
             <img src="../open menu icon.svg" id="navCollapse" style="padding: 20px" height=50>
 
             <div id="navbarLinks">
-                <a href="./calendar.html" class="navbarElm en">Calendar & News</a>
-                <a href="./calendrier.html" class="navbarElm fr">Calendrier & Actualités</a>
+                <a href="./home.html" class="navbarElm en">Home</a>
+                <a href="./accueil.html" class="navbarElm fr">Accueil</a>
 
                 <div id="membershipDropDownTrigger" class="dropDown navbarElm">
                     <span class="en">Membership</span>
@@ -60,7 +60,7 @@ class Navbar extends HTMLElement {
                     </div>
                 </div>
 
-                <a href="../fr/calendrier.html" id="languageSwap" class="navbarElm">Français</a>
+                <a href="../fr/accueil.html" id="languageSwap" class="navbarElm">Français</a>
             </div>
         </div>
 
