@@ -1,6 +1,6 @@
 const lang = window.location.href.includes("en") ? "en" : "fr"
 
-const div = document.getElementById("calendarBody")
+const calendarDiv = document.getElementById("calendarBody")
 for (let i = 0; i < calendar.length; i++) {
     const row = document.createElement("tr")
 
@@ -40,5 +40,5 @@ for (let i = 0; i < calendar.length; i++) {
     }
     row.append(location)
 
-    div.append(row)
+    calendarDiv.append(row)
 }

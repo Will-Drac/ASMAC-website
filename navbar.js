@@ -3,8 +3,8 @@ class Navbar extends HTMLElement {
         this.innerHTML = /*html*/ `
 
         <div id="navbar">
-            <img style="height:75px; padding: 10px; border-radius: 25px" class="en" title="ASMAC Logo" src="../ASMAC Logo.png">
-            <img style="height:75px; padding: 10px; border-radius: 25px" class="fr" title="Logo AFASC" src="../AFASC Logo.png">
+            <img style="height:75px; padding: 10px; border-radius: 25px" class="en" title="ASMAC Logo" src="../images/ASMAC Logo.png">
+            <img style="height:75px; padding: 10px; border-radius: 25px" class="fr" title="Logo AFASC" src="../images/AFASC Logo.png">
 
             <img src="../open menu icon.svg" id="navCollapse" style="padding: 20px" height=50>
 

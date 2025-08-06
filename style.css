@@ -1,6 +1,6 @@
 :root {
     --dark: #2b422e;
-    --gray: #8dae8e;
+    --gray: #d2edd3;
     --white: #EDF2F4;
     --lightColour: #d30f29;
     --colour: #b90422;
@@ -164,4 +164,39 @@ th {
     border: 2px solid var(--dark);
     background-color: var(--gray);
     padding: 10px;
+}
+
+#infoBoxesDiv {
+    display: flex;
+    justify-content: space-evenly;
+
+    border-top: 5px solid var(--colour);
+    border-bottom: 5px solid var(--colour);
+
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    flex-wrap: wrap;
+}
+
+.infoBoxButton {
+    margin: 5px;
+    padding: 5px;
+    background: var(--dark);
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 10px;
+    font-size: larger;
+}
+
+.infoBoxButton:hover {
+    margin: 0px;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    text-align: center;
 }
