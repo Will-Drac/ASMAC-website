@@ -1,12 +1,12 @@
-close the navbar into a togglable vertical menu when the screen width is too low
 passwords
     needs access to wordpress server; fake it?
 fill in some french pages
 new logo?
 
-landing page "home"
-3 top things determined on the fly
-        webinar
-        bursary
-        register for general meeting
-    a bit of information and link
+
+
+
+easy english-french
+simplified categories & structure
+should work on any device (phones)
+easy to change calendar & info boxes

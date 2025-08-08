@@ -141,6 +141,27 @@ body {
     padding-bottom: 20px;
 }
 
+#topBanner {
+    height: 250px;
+    background-image: url("./images/banner image.jpeg");
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: larger;
+    background-size: cover;
+}
+
+.bannerElm {
+    margin:0px;
+    padding: 25px;
+    color: white;
+    background-color: #19441fb8;
+    border-radius: 10px;
+    backdrop-filter: blur(3px);
+}
+
 #pageBody {
     position: relative;
     top: 75px;
