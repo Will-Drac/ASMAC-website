@@ -37,12 +37,11 @@ for (let i = 0; i < infoBoxes.length; i++) {
     box.append(textElm)
 
     for (let i = 0; i < content.buttons.length; i++) {
-        const buttonElm = document.createElement("span")
+        const buttonElm = document.createElement("a")
         buttonElm.innerText = content.buttons[i][lang]
         buttonElm.classList.add("infoBoxButton")
-        buttonElm.addEventListener("click", function () {
-            window.location.href = content.buttons[i].link
-        })
+        buttonElm.href = content.buttons[i].link
+        buttonElm.target = "_blank"
         box.append(buttonElm)
     }
 }
